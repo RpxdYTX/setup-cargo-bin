@@ -20,7 +20,7 @@ runs:
           path: $HOME/.cargo/bin
           key: ${{ runner.os }}-setup-${{ inputs.bin-name }}
 
-     - id: Cache Installation and Search for previous Caches
+    - id: Cache Installation and Search for previous Caches
       if: ${{ runner.os == 'Windows' || matrix.os == 'windows-latest' }}
       uses: actions/cache@v2
       with: 
