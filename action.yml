@@ -14,20 +14,20 @@ runs:
   using: "composite"
   steps:
     - id: cache_installation_unix
+      shell: bash
       if: ${{ runner.os != 'Windows' || matrix.os != 'windows-latest' }}
       uses: actions/cache@v2
       with: 
-          path: $HOME/.cargo/bin
-          key: ${{ runner.os }}-setup-${{ inputs.bin-name }}
-      shell: bash
-
+        path: $HOME/.cargo/bin
+        key: ${{ runner.os }}-setup-${{ inputs.bin-name }}
+      
     - id: cache_installation_windows
+      shell: bash
       if: ${{ runner.os == 'Windows' || matrix.os == 'windows-latest' }}
       uses: actions/cache@v2
       with: 
-          path: $UserProfile/.cargo/bin
-          key: windows-setup-${{ inputs.bin-name }}
-      shell: bash
+        path: $UserProfile/.cargo/bin
+        key: windows-setup-${{ inputs.bin-name }}
 
     - id: install_binary
       run: cargo install ${{ inputs.bin-name }} ${{ inputs.args }}
