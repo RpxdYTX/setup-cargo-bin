@@ -14,7 +14,6 @@ runs:
   using: "composite"
   steps:
     - id: cache_installation_unix
-      shell: bash
       if: ${{ runner.os != 'Windows' || matrix.os != 'windows-latest' }}
       uses: actions/cache@v2
       with: 
@@ -22,7 +21,6 @@ runs:
         key: ${{ runner.os }}-setup-${{ inputs.bin-name }}
       
     - id: cache_installation_windows
-      shell: bash
       if: ${{ runner.os == 'Windows' || matrix.os == 'windows-latest' }}
       uses: actions/cache@v2
       with: 
