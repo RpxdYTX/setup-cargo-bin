@@ -1,5 +1,4 @@
 name: 'Setup Cargo Binaries'
-
 description: 'Sets up a Rust Cargo binary crate'
 
 inputs:
@@ -12,7 +11,7 @@ inputs:
     default: ''
 
 runs:
-  using "composite"
+  using: "composite"
   steps:
     - id: Cache Installation and Search for previous Caches
       if: runner.os != 'Windows' || matrix.os != 'windows-latest'
