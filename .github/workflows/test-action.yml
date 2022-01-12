@@ -13,8 +13,6 @@ on:
       - 'action.yml'
       - '.github/workflows/test-action.yml'
 
-  workflow_dispatch:
-
 env:
   CARGO_TERM_COLOR: always
 
