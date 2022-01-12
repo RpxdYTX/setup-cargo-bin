@@ -25,7 +25,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - uses: RpxdYTX/setup-cargo-bin@v1
+      - name: Setup Cross
+        uses: RpxdYTX/setup-cargo-bin@v1
         with:
           bin-name: cross
 
