@@ -10,7 +10,8 @@
      bin-name: 'A crates.io binary crate, like "cargo-modules" or "mdbook"'
  ```
 
- The installation will be cached, so it won't be installated every time you run the workflow.
+ The first time you run it, the installation will be cached, so it won't be installated every time
+ you run the workflow.
  Using the `args` input, you can pass arguments to Cargo during the installation, such as `--force`:
 
  ```yaml
