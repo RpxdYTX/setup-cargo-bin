@@ -16,7 +16,7 @@ runs:
     - id: cache_installation
       uses: actions/cache@v2
       with: 
-        path: ~/.cargo/bin
+        path: ~/.cargo/
         key: ${{ runner.os }}-setup-${{ inputs.bin-name }}
       
     - id: install_binary
