@@ -28,3 +28,6 @@ jobs:
       - uses: actions/setup-cargo-bin@v1
         with:
           bin-name: cross
+
+      - name: Test Cross
+        run: cross -h
