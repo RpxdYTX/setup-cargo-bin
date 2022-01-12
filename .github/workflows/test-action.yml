@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Setup Cross
-        uses: RpxdYTX/setup-cargo-bin@v3
+        uses: RpxdYTX/setup-cargo-bin@v0-alpha
         with:
           bin-name: cross
 
